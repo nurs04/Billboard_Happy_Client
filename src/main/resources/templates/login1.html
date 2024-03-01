@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -46,7 +47,7 @@
         .container {
             width: 1200px;
             margin: 0 auto;
-            opacity: 80%;
+            opacity: 95%;
         }
 
         .logIn {
@@ -102,7 +103,7 @@
             background: #fff;
             border: 2px solid rgba(0, 0, 0, 0.31);
             border-radius: 8px;
-            width: 280px;
+            width: 380px;
             padding: 15px 27px;
             font-size: 14px;
             margin-bottom: 18px;
@@ -159,6 +160,11 @@
             width: 275px;
             margin-left: 75px;
         }
+
+        .labelName {
+            color: #0E0B85CC;
+            margin-right: 16rem;
+        }
     </style>
 </head>
 <body>
@@ -171,9 +177,10 @@
 
                 <form th:action="@{'/auth'}" method="post">
                     <div class="info">
+                        <label for="" class="labelName">Username</label>
                         <input type="text" name="user_email" placeholder="Email" required>
-                        
-<input type="password" name="user_password" placeholder="Password" minlength="8" required>
+                        <label for="" class="labelName">Password</label>
+                        <input type="password" name="user_password" placeholder="Password" minlength="8" required>
                         <div class="wrong_password" id="wrong_password" th:if="${param.notEqualPasswords != null}">
                             <p>Incorrect password</p>
                         </div>
