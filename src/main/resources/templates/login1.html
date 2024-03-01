@@ -1,4 +1,3 @@
-> Aigerim:
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -14,7 +13,7 @@
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background: url(src/main/resources/static/img/pngtree-times-square-at-dusk-with-taxis-in-the-middle-of-the-picture-image_2772718.jpg) 0 0 no-repeat;
+            background: url(/src/main/resources/static/img/pngtree-times-square-at-dusk-with-taxis-in-the-middle-of-the-picture-image_2772718.jpg) 0 0 no-repeat;
         }
 
         h1, h2, h3, h4, h5, h6 {
@@ -172,8 +171,7 @@
                 <form th:action="@{'/auth'}" method="post">
                     <div class="info">
                         <input type="text" name="user_email" placeholder="Email" required>
-
-> Aigerim:
+                        
 <input type="password" name="user_password" placeholder="Password" minlength="8" required>
                         <div class="wrong_password" id="wrong_password" th:if="${param.notEqualPasswords != null}">
                             <p>Incorrect password</p>
