@@ -200,13 +200,11 @@
 
 <script type="text/javascript" src="/js/jquery-3.6.0.min.js"></script>
 <script type="text/javascript">
-    $(document).ready(function() {
     $('#myModal__close, #myOverlay').click(function () {
         $('#myModal, #myOverlay').animate({opacity: 0}, 198, function () {
             $(this).css('display', 'none');
             $('#myOverlay').fadeOut(297);
         });
-    });
 });
 </script>
 </body>
